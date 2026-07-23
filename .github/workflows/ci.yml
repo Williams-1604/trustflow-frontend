@@ -36,6 +36,9 @@ jobs:
       - name: Install dependencies
         run: npm ci
 
+      - name: Verify contract bindings are up-to-date
+        run: npm run codegen:validate
+
       - name: Run linter
         run: npm run lint
 
